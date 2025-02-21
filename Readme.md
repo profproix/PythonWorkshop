@@ -22,13 +22,12 @@ Welcome to the first of two Python workshops for ArcGIS! This workshop focuses o
 | 30 minutes     | If-Else Statements      |
 | 20 minutes     | Exercise                |
 | 15 minutes     | Break                   |
-| 90 minutes     | Project                 |
+| 75 minutes     | Project                 |
 | 30 minutes     | Presentations           |
 | -              | End                     |
 
 ## 
 
-Here’s the cleaned-up version:
 
 
 ### Environment Setup
