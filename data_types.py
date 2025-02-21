@@ -1,41 +1,116 @@
+import math
+
+# ------------------------
 # Data Types
+# ------------------------
+
 # In Python, we have different ways to categorize data, called "data types."
 # Let’s go over a few of the most common ones!
 
 ## Primitive Data Types
 
-# Integer
-# These are just whole numbers, like the ones you’d count with.
+# Integer - Whole numbers
 1
 42
 
-# Float
-# If a number has a decimal point, it’s a float. Think of things like prices or measurements.
+# Float - Numbers with decimals (e.g., prices, measurements)
 0.99
 3.14
 
-# Boolean
-# This is a fancy way of saying True or False. It’s super useful for making decisions in your code.
+# Boolean - Represents True or False values
 True
 False
 
-# String
-# Strings are just text! You can put them in single or double quotes—it’s your choice.
+# String - Text, enclosed in single or double quotes
 "Hello World"
 'python'
 
-## Non-Primitive Data Types
-# Now we’re getting into the cool stuff! These data types can hold multiple pieces of data.
+# ------------------------
+# Statements and Variables
+# ------------------------
 
-# Lists
-# A list is like a container where you can keep things in order. You can mix and match data types, too.
-[1, 2, 3, 4]
-["a", True, 10.01]
+# Statements are lines of code that perform an action, such as assigning a variable.
 
-# Dictionaries
-# A dictionary is another container, but instead of just a list of items, it pairs things together.
-# For example, you can use it to store information about a character, like their name, species, and age.
-{
+# Variables store data for later use.
+greeting = "Hello world"  # Creating a variable 'greeting' and assigning a value.
+
+# The `print` function displays output in the console.
+print(greeting)  # Output: "Hello world"
+
+# Updating the variable
+greeting = "Hi!"
+print(greeting)  # Output: "Hi!"
+
+# ------------------------
+# String Functions
+# ------------------------
+
+name = "rose"
+print(name.upper())      # Output: "ROSE"
+print(name.lower())      # Output: "rose"
+print(name.title())      # Output: "Rose"
+print(name.capitalize()) # Output: "Rose"
+
+# ------------------------
+# Expressions and Arithmetic Operators
+# ------------------------
+
+# Expressions evaluate to a value
+print(1 + 1)  # Output: 2
+
+# Using variables in expressions
+num1 = 100
+num2 = 2000
+sum_result = num1 + num2
+print(sum_result)  # Output: 2100
+
+# Subtraction
+difference = 100 - 10
+
+# Multiplication
+tax = 0.10
+price = 75
+total_price = tax * price
+
+# Division
+number_of_people = 4
+cost_per_person = total_price / number_of_people
+
+# Modulus (remainder operator)
+is_even = 10 % 2  # 0 means even
+
+# Exponents
+exponent_result = 5 ** 5
+
+# ------------------------
+# Basic Math Functions
+# ------------------------
+
+print(abs(709.90 * 2343.845027834))
+print(pow(3, 2))  # Same as 3 ** 2
+print(round(0.23450943875, 4))
+
+score1 = 324 + 2345.656 + 43543.453 + 34543.34
+score2 = 7355 + 346.346 + 934543.834
+
+print(max(score1, score2))  # Larger value
+print(min(score1, score2))  # Smaller value
+
+# Using the math module
+print(math.sqrt(25))       # Square root
+print(math.ceil(45.32453)) # Round up
+print(math.floor(563.756)) # Round down
+
+# ------------------------
+# Non-Primitive Data Types
+# ------------------------
+
+# Lists - Ordered collection of items
+num_list = [1, 2, 3, 4]
+random_list = ["a", True, 10.01]
+
+# Dictionaries - Key-value pairs
+bilbo = {
     "name": "Bilbo Baggins",
     "species": "Hobbit",
     "home": "Bag End, Hobbiton",
@@ -43,86 +118,37 @@ False
     "age": 131
 }
 
-## Variables
-# Think of variables as little boxes where you can store data for later.
-# The name of the variable should describe what’s inside to keep things clear.
+# ------------------------
+# Accessing and Updating Lists
+# ------------------------
 
-# Here’s an example:
-name = "Bilbo Baggins"  # This variable holds a name, so we called it "name."
-
-# You can also store more complex data, like this dictionary full of Gandalf’s info:
-character_info = {
-    "name": "Gandalf the Gray",
-    "species": "Maia",
-    "home": "Valinor (originally), often found wandering Middle-earth",
-    "story": "The Hobbit and The Lord of the Rings",
-    "age": "Over 10,000 years (timeless being)"
-}
-
-#Exercise:
-#Make a list containing your favorite movies
-# Make a dictionary with the keys name, degree_program, favorite_book and give each key values.
-
-
-# Accessing and manipulating variables
-greeting = "Hello world"  # Here, we’re creating a variable called 'greeting' and setting it to "Hello world."
-print(greeting)  # This prints the current value of 'greeting' to the console.
-
-# Now, let’s change the value of 'greeting.'
-greeting = "Hi!"
-print(greeting)  # When we print it again, we’ll see the updated value.
-
-# How to run this code:
-# You can click the green play button in the top left corner of your Python editor to run it.
-
-# What does the print function do?
-# The `print` function is built into Python. It takes whatever you give it and displays it in the console.
-
-# How does this work step by step?
-# Python runs your script line by line from top to bottom.
-# 1. First, we set 'greeting' to "Hello world" and print it.
-# 2. Then, we change 'greeting' to "Hi!" and print it again.
-# By running the code, you can see how the value of the variable changes in real-time.
-
-# Accessing and updating values in lists
 tolkien_books = [
     "The Hobbit",
     "The Fellowship of the Ring",
     "The Two Towers",
     "The Return of the King",
-    "The Silmarillion",
+    "The Silmarillion"
 ]
 
-# Accessing values in a list
-# To get a value from a list, use its position (index) along with the variable name.
-# Remember, Python lists start counting from 0!
-print(tolkien_books[0])  # This prints the first book, "The Hobbit"
-print(tolkien_books[2])  # This prints the third book, "The Two Towers"
+# Accessing values using index
+print(tolkien_books[0])  # Output: "The Hobbit"
+print(tolkien_books[2])  # Output: "The Two Towers"
 
-# Run the code to see what prints to the console!
+# Updating values
+tolkien_books[4] = "The Fall of Gondolin"
+print(tolkien_books)
 
-# Updating a value in the list
-# To change a value, access it by its position and assign it a new value.
-tolkien_books[4] = "The Fall of Gondolin"  # Replacing "The Silmarillion" with "The Fall of Gondolin"
-print(tolkien_books)  # Let's see how the list looks now!
+# Adding items
+tolkien_books.append("The Silmarillion")
+print(tolkien_books)
 
-# Adding new items to the end of the list
-# You can use the .append() method to add an item to the end of the list.
-tolkien_books.append("The Silmarillion")  # Adding "The Silmarillion" back to the list
-print(tolkien_books)  # Check out the updated list!
-# Getting the length of a list
-# If you want to know how many items are in a list, you can use the len() function.
-print(len(tolkien_books))  # This prints the number of books in the 'tolkien_books' list.
+# Getting the length of the list
+print(len(tolkien_books))
 
-# More information on Python lists:
-# Intro: https://www.w3schools.com/python/python_lists.asp
-# Access: https://www.w3schools.com/python/python_lists_access.asp
-# Updating: https://www.w3schools.com/python/python_lists_change.asp
-# Add: https://www.w3schools.com/python/python_lists_add.asp
-# Remove: https://www.w3schools.com/python/python_lists_remove.asp
+# ------------------------
+# Working with Dictionaries
+# ------------------------
 
-# Working with dictionaries
-# Accessing elements in a dictionary using their keys
 character_info_two = {
     "name": "Frodo Baggins",
     "species": "Hobbit",
@@ -131,40 +157,101 @@ character_info_two = {
     "age": 50
 }
 
-# Accessing specific values using keys
-print(character_info_two["name"])  # Prints Frodo's name
-print(character_info_two["home"])  # Prints Frodo's home
+# Accessing values
+print(character_info_two["name"])  # Output: "Frodo Baggins"
+print(character_info_two["home"])  # Output: "Bag End, Hobbiton"
 
-# Updating values in a dictionary
-character_info_two["age"] = 53  # Updates Frodo's age to reflect his age at the end of the series
-print(character_info_two)  # Run the code to see the updated dictionary
+# Updating values
+character_info_two["age"] = 53
+print(character_info_two)
 
-# Adding a new key-value pair to the dictionary
-# You can add a new key by specifying the key name and assigning it a value.
+# Adding a new key-value pair
 character_info_two["role"] = "Ring-bearer"
-print(character_info_two)  # Run the code to see the updated dictionary with the new key-value pair
+print(character_info_two)
 
-# More information on Python dictionaries:
-# Intro: https://www.w3schools.com/python/python_dictionaries.asp
-# Access: https://www.w3schools.com/python/python_dictionaries_access.asp
-# Updating: https://www.w3schools.com/python/python_dictionaries_change.asp
-# Add: https://www.w3schools.com/python/python_dictionaries_add.asp
-# Remove: https://www.w3schools.com/python/python_dictionaries_remove.asp
+# ------------------------
+# Accessing Nested Values
+# ------------------------
 
-#Exersise
+character_info_list = [
+    {
+        "name": "Frodo Baggins",
+        "species": "Hobbit",
+        "home": "Bag End, Hobbiton",
+        "age": 50,
+        "books": ["The Fellowship of the Ring", "The Two Towers", "The Return of the King"]
+    },
+    {
+        "name": "Gandalf",
+        "species": "Maia (Wizard)",
+        "home": "Valinor (originally)",
+        "age": "Over 10,000",
+        "books": ["The Hobbit", "The Fellowship of the Ring", "The Two Towers", "The Return of the King"]
+    }
+]
+
+# Accessing nested values
+print(character_info_list[1]["name"])  # Output: "Gandalf"
+print(character_info_list[1]["books"][0])  # Output: "The Hobbit"
+
+# ------------------------
+# Exercise 📝
+# ------------------------
+
 # Part 1: Lists
-# Create a list of your favorite hobbies.
-# Access and print the first and third items in your list.
-# Add a new hobby to the end of the list.
-# Replace the second item in your list with another hobby.
-# Print the updated list and its length.
+# 1. Create a list of your favorite hobbies.
+# 2. Access and print the first and third items.
+# 3. Add a new hobby to the list.
+# 4. Replace the second item with another hobby.
+# 5. Print the updated list and its length.
+
 # Part 2: Dictionaries
-# Create a dictionary about yourself with the following keys:
-# name
-# age
-# favorite_color
-# hobbies (use the list you created in Part 1 as the value for this key)
-# Access and print the value associated with the favorite_color key.
-# Update your age key with a new value.
-# Add a new key-value pair for favorite_food and assign it a value.
-# Print the updated dictionary.
+# 1. Create a dictionary about yourself with:
+#    - name
+#    - age
+#    - favorite_color
+#    - hobbies (use the list from Part 1)
+# 2. Access and print your favorite_color.
+# 3. Update your age.
+# 4. Add a new key-value pair for favorite_food.
+# 5. Print the updated dictionary.
+# 6. Access and print a specific hobby from the dictionary.
+
+# ------------------------
+# List and Dictionary Functions
+# ------------------------
+
+print(len(character_info_list))  # Returns the number of elements
+
+# Correct way to append dictionaries to a list
+character_info_list.append({
+    "name": "Éowyn",
+    "species": "Human (Rohirrim)",
+    "home": "Rohan",
+    "age": 24,
+    "books": ["The Two Towers", "The Return of the King"]
+})
+
+num_list = [1, 2, 3, 4, 1, 3, 7, 1]
+num_list.remove(3)  # Removes first occurrence of 3
+print(num_list.count(1))  # Counts occurrences of 1
+
+num_list.sort()  # Sorts the list in ascending order
+print(num_list)
+
+# Dictionary operations
+gollum = {
+    "name": "Gollum (Sméagol)",
+    "species": "Hobbit (Stoor)",
+    "home": "Gladden Fields",
+    "age": "~589",
+    "books": ["The Hobbit", "The Fellowship of the Ring", "The Two Towers", "The Return of the King"],
+    "has_ring": False
+}
+
+print(len(gollum))
+print(gollum.keys())
+print(gollum.values())
+print(gollum.items())
+gollum.pop("has_ring")
+print(gollum)
