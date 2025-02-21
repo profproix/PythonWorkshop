@@ -41,7 +41,7 @@ A script is a sequence of instructions written in a programming language, like P
 
 For example, in this workshop, you will learn how to write scripts to manipulate data, perform calculations, and build simple tools that can enhance workflows in ArcGIS.
 
-## What is python
+## What is Python
 Python is an open-source programming language, first released in 1991, that is used in a variety of industries and tasks, including data analytics, web development, machine learning, artificial intelligence, and scripting.
 
 Compared to other programming languages, Python is often considered beginner-friendly and highly readable. With just a little Python knowledge, you can start writing scripts to automate tasks for your project. 
