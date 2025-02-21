@@ -9,21 +9,25 @@ tides = [
 # In the code below, we are going to calculate the average tide height from the list above.
 
 # This variable stores the sum of the tide heights.
-
+total_tide_height = 0
 
 # This loop runs once for every item in the tides list (4 times in this case).
 # During each loop, the current item is stored in the `tideData` variable.
-
+for tideData in tides:
+    # Add the current tide height to the running total.
+    total_tide_height += tideData["height"]
+    # Print the current sum of tide heights.
+    print(f"Tide Height Sum: {total_tide_height}")
 
 # Here, we calculate the average tide height by dividing the total height by the number of items in the list.
 # Average = sum / number of elements.
-
+average_tide_height = total_tide_height / len(tides)
 
 # Print the average tide height.
 # The str will convert our float number to a string so we can print it
+print(f"Average Tide Height: " + str(average_tide_height))
 
-
-# Exercise 📝
+# Exercise
 # Given the list below, use a loop to find the total average grade for the class and convert it to a percentage.
 # The answer should be 78.40%
 # Explore these Python arithmetic operators to learn how to perform the calculations needed for this exercise.
